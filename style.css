@@ -1410,3 +1410,81 @@ margin-bottom:20px;}
         transform: none !important;
     }
 }
+
+/* ===================================================
+   FINAL MOBILE FIXES FOR OFFICIAL LOOK
+=================================================== */
+@media (max-width: 768px) {
+    /* Hero section ki height aur padding to perfect official look */
+    .hero {
+        height: auto !important;
+        min-height: 100vh;
+        padding: 120px 20px 60px 20px !important; /* Header ke niche munasib space */
+        display: flex;
+        flex-direction: column-reverse !important; 
+        justify-content: center;
+        gap: 30px;
+    }
+
+    /* Heading sizes ko chota karein takay naam screen se bahar na jaye */
+    .hero-left h1 {
+        font-size: 32px !important; /* "Muhammad Rashid" screen par poora aayega */
+        word-wrap: break-word;
+        margin: 10px 0;
+    }
+
+    .hero-left h2 {
+        font-size: 24px !important; /* Typing text ka size */
+    }
+
+    .hero-left h3 {
+        font-size: 22px !important; /* "Hello, I'm" ka size */
+    }
+
+    .hero-left p {
+        font-size: 15px !important; /* Paragraph text mobile friendly size */
+        line-height: 26px;
+    }
+
+    /* Image ka size mobile screen ke mutabiq balance karne ke liye */
+    .hero-right img {
+        width: 220px !important; /* Thoda chota aur clean single view aur border center alignment */
+        height: 220px !important;
+        object-fit: cover;
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+
+    /* Buttons alignment */
+    .hero .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    /* Buttons style for mobile */
+    .hero .btn, 
+    .hero .btn2 {
+        width: 85% !important;
+        max-width: 300px;
+        margin-right: 0 !important;
+        text-align: center;
+        padding: 12px 20px !important; /* Mobile touch ke liye behtar spacing */
+    }
+    
+    /* Social media icons responsive positioning */
+    .social {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .social a {
+        margin-right: 0 !important; /* Puraani desktop margin hatayein */
+    }
+}
