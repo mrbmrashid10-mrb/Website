@@ -1372,3 +1372,41 @@ margin-bottom:20px;}
         width:250px;
     }
 }
+/* ===================================================
+   MOBILE FIXES FOR HERO & OVERLAPPING BUTTONS
+=================================================== */
+@media (max-width: 768px) {
+    /* 1. Hero section ki height mobile par auto karein takay content overlap na ho */
+    .hero {
+        height: auto !important;
+        min-height: 100vh;
+        padding-top: 140px; /* Header ke niche space dene ke liye */
+        padding-bottom: 50px;
+        flex-direction: column-reverse !important; /* Image upar/niche adjust karne ke liye */
+        gap: 40px;
+    }
+
+    /* 2. Buttons ko upar-niche tameez se alignment dene ke liye */
+    .hero .buttons {
+        display: flex;
+        flex-direction: column; /* Buttons ek ke niche ek aayenge */
+        align-items: center;
+        gap: 15px; /* Dono buttons ke beech ka gap */
+        margin-top: 25px;
+    }
+
+    /* Puraani margin-right ko khatam karein aur width adjust karein */
+    .hero .btn, 
+    .hero .btn2 {
+        width: 85%; /* Mobile screen ke mutabiq wide buttons */
+        margin-right: 0 !important; /* Puraani side margin zero */
+        text-align: center;
+        display: block;
+    }
+
+    /* 3. Global Section opacity fix (Aapke JS animations ke liye safetynet) */
+    section {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
