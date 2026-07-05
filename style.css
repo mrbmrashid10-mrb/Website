@@ -1488,3 +1488,48 @@ margin-bottom:20px;}
         margin-right: 0 !important; /* Puraani desktop margin hatayein */
     }
 }
+/* ===================================================
+   MOBILE HEADER FIX (LOGO LEFT, ICONS RIGHT)
+=================================================== */
+@media (max-width: 768px) {
+  
+  /* Header ko row layout mein wapis laane ke liye */
+  header {
+    flex-direction: row !important; /* Elements ko upar-niche hone se rokega */
+    justify-content: space-between !important; /* Left aur right corners par bheje ga */
+    padding: 15px 5%; /* Mobile ke mutabiq padding choti */
+    align-items: center;
+    height: 70px;
+  }
+
+  /* Right side par icons ko ek line mein rakhne ke liye container */
+  /* Agar HTML mein menu aur theme toggle aagay peechay hain, to ye unhe ek sath right par fit kar dega */
+  .header-right-side {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Hamburger menu icon aur theme toggle ko right par manage karna */
+  .menu-btn {
+    order: 2; /* Menu button sabse aakhir mein aayega */
+    margin-left: 10px;
+  }
+
+  .theme-toggle {
+    order: 1; /* Dark mode icon pehle aayega */
+    margin-left: 0 !important;
+    width: 38px; /* Mobile par thoda sensible size */
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 24px; /* Mobile ke liye behtar size */
+  }
+
+  /* Nav menu open hone par top space adjust karein */
+  nav {
+    top: 70px !important;
+  }
+}
